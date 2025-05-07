@@ -38,13 +38,23 @@
             compatible = "zmk,behavior-unicode";
             #binding-cells = <1>;
             unicode-map = <
-              0x00E4  // 0: ä
-              0x00F6  // 1: ö
-              0x00FC  // 2: ü
-              0x00C4  // 3: Ä
-              0x00D6  // 4: Ö
-              0x00DC  // 5: Ü
-              0x00DF  // 6: ß
+                0x00E4  // 0: ä
+                0x00F6  // 1: ö
+                0x00FC  // 2: ü
+                0x00C4  // 3: Ä
+                0x00D6  // 4: Ö
+                0x00DC  // 5: Ü
+                0x00DF  // 6: ß
+                0x0023  // 7: #
+                0x002B  // 8: +
+                0x0022  // 9: "
+                0x007C  // 10: |
+                0x00B0  // 11: °
+                0x005E  // 12: ^
+                0x00A7  // 13: §
+                0x00B5  // 14: µ
+                0x003C  // 15: <
+                0x003E  // 16: >
           >;
         };
 
@@ -94,16 +104,17 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "SYMBOL-DE";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&unicode_input 12   &unicode_input 11   &kp 2           &kp 3         &kp 4         &kp 5                                     &mmv MOVE_UP       &kp 6           &kp 7           &kp 8          &kp 9           &kp 0         &kp BSPC
+&trans              &bt BT_CLR          &mkp LCLK       &mkp MCLK     &mkp RCLK     &mkp MB4         &mmv MOVE_LEFT       &mkp LCLK          &mmv MOVE_RIGHT  &kp MINUS       &kp EQUAL      &unicode_input 15  &unicode_input 16  &kp BSLH   &unicode_input 13  // §
+&trans              &out OUT_USB        &out OUT_BLE    &none         &none         &mkp MB5         &trans               &mmv MOVE_DOWN     &unicode_input 10  &unicode_input 8  &unicode_input 7  &unicode_input 9  &kp PIPE     &unicode_input 14  // µ
+                   &trans              &trans          &kp SPACE                                                            &kp RET            &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
+
 
         layer_3 {
             display-name = "Fn";
