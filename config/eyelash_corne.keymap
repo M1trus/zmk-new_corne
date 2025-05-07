@@ -55,6 +55,16 @@
                 0x00B5  // 14: µ
                 0x003C  // 15: <
                 0x003E  // 16: >
+                0x0024  // 17: $ (DOLLAR)
+                0x0025  // 18: % (PERCENT)
+                0x0040  // 19: @
+                0x20AC  // 20: € (EURO)
+                0x007B  // 21: {
+                0x007D  // 22: }
+                0x005B  // 23: [
+                0x005D  // 24: ]
+                0x005C  // 25: \ (Backslash)
+                0x007E  // 26: ~
           >;
         };
 
@@ -92,12 +102,12 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
-            bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+            display-name = "NUMBER-DE";
+    bindings = <
+&trans  &kp 1          &kp 2        &kp 3         &kp 4         &kp 5                                     &mmv MOVE_UP        &kp 6        &kp 7        &kp 8         &kp 9        &kp 0        &kp BSPC
+&trans  &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT  &unicode_input 19 &unicode_input 20 &unicode_input 21 &unicode_input 22 &kp HOME  &kp PG_UP
+&trans  &rgb_ug RGB_OFF &rgb_ug RGB_ON &trans    &trans       &rgb_ug RGB_EFF &kp C_MUTE       &mmv MOVE_DOWN  &unicode_input 23 &unicode_input 24 &unicode_input 25 &unicode_input 26 &kp END   &kp PG_DN
+                            &trans        &trans        &trans                                                                      &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
