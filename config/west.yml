@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
 
   projects:
     - name: eyelash_corne
@@ -16,7 +14,7 @@ manifest:
       import: app/west.yml
 
     - name: zmk-unicode
-      remote: urob
+      url: https://github.com/urob/zmk-unicode.git
       revision: main
       path: modules/zmk-unicode
 
