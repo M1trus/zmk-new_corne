@@ -13,5 +13,7 @@ include:
     artifact-name: eyelash_corne_studio_left
   - board: eyelash_corne_left
     shield: settings_reset
+    extra_modules:
+    - modules/zmk-unicode
     #snippet: zmk-usb-logging
  
