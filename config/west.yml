@@ -2,21 +2,23 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmk-unicode
-      path: modules/zmk-unicode
-      url: https://github.com/urob/zmk-unicode.git
+    - name: urob
+      url-base: https://github.com/urob
 
-      # Additional modules containing boards/shields/custom code can be listed here as well.
-      # See:
-      # - https://zmk.dev/docs/features/modules
-      # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
+
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+
+    - name: zmk-unicode
+      remote: urob
+      revision: main
+      path: modules/zmk-unicode
+
   self:
     path: config
