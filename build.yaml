@@ -1,19 +1,26 @@
 ---
 include:
-#  - board: eyelash_corne_left
-#    shield: nice_view
-#    #snippet: zmk-usb-logging    # Uncomment to log over USB.
+  # Optional: Falls du den Build für die linke Seite mit NiceView später aktivierst
+  # - board: eyelash_corne_left
+  #   shield: nice_view
+  #   extra_modules:
+  #     - modules/zmk-unicode
+
   - board: eyelash_corne_right
     shield: nice_view
-    #snippet: zmk-usb-logging
+    extra_modules:
+      - modules/zmk-unicode
+
   - board: eyelash_corne_left
     shield: nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: eyelash_corne_studio_left
+    extra_modules:
+      - modules/zmk-unicode
+
   - board: eyelash_corne_left
     shield: settings_reset
     extra_modules:
-    - modules/zmk-unicode
-    #snippet: zmk-usb-logging
- 
+      - modules/zmk-unicode
+
