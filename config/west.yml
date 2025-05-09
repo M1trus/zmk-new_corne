@@ -16,7 +16,7 @@ manifest:
       import: app/west.yml
 
     - name: zmk-unicode
-      url: https://github.com/urob/zmk-unicode.git
+      remote: urob
       revision: main
       path: modules/zmk-unicode
 
