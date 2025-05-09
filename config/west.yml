@@ -2,6 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: zmk-unicode
+      path: modules/zmk-unicode
+      url: https://github.com/urob/zmk-unicode.git
+
       # Additional modules containing boards/shields/custom code can be listed here as well.
       # See:
       # - https://zmk.dev/docs/features/modules
