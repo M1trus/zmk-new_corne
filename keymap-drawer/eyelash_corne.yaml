@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  QWERTZ:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - '&de_ue'
   - '&td0'
   - A
   - S
