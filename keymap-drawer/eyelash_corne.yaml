@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - '&de_ue'
+  - {t: '&de_ue_lower', s: '&de_ue_upper'}
   - '&td0'
   - A
   - S
