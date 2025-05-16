@@ -34,40 +34,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-        unicode_input: unicode_input {
-            compatible = "zmk,behavior-unicode";
-            #binding-cells = <1>;
-            unicode-map = <
-                0x00E4  // 0: ä
-                0x00F6  // 1: ö
-                0x00FC  // 2: ü
-                0x00C4  // 3: Ä
-                0x00D6  // 4: Ö
-                0x00DC  // 5: Ü
-                0x00DF  // 6: ß
-                0x0023  // 7: #
-                0x002B  // 8: +
-                0x0022  // 9: "
-                0x007C  // 10: |
-                0x00B0  // 11: °
-                0x005E  // 12: ^
-                0x00A7  // 13: §
-                0x00B5  // 14: µ
-                0x003C  // 15: <
-                0x003E  // 16: >
-                0x0024  // 17: $ (DOLLAR)
-                0x0025  // 18: % (PERCENT)
-                0x0040  // 19: @
-                0x20AC  // 20: € (EURO)
-                0x007B  // 21: {
-                0x007D  // 22: }
-                0x005B  // 23: [
-                0x005D  // 24: ]
-                0x005C  // 25: \ (Backslash)
-                0x007E  // 26: ~
-          >;
-        };
-
     };
 
     rgb_encoder: rgb_encoder {
@@ -96,35 +62,34 @@
                          &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
-            // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
-            sensor-bindings = <&inc_dec_kp N2 N1>;
+           
         };
 
         lower_layer {
-            display-name = "NUMBER-DE";
-    bindings = <
-&trans  &kp 1          &kp 2        &kp 3         &kp 4         &kp 5                                     &mmv MOVE_UP        &kp 6        &kp 7        &kp 8         &kp 9        &kp 0        &kp BSPC
-&trans  &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT  &unicode_input 19 &unicode_input 20 &unicode_input 21 &unicode_input 22 &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF &rgb_ug RGB_ON &trans    &trans       &rgb_ug RGB_EFF &kp C_MUTE       &mmv MOVE_DOWN  &unicode_input 23 &unicode_input 24 &unicode_input 25 &unicode_input 26 &kp END   &kp PG_DN
-                            &trans        &trans        &trans                                                                      &kp INS          &kp DEL          &trans
+            display-name = "NUMBER";
+            bindings = <
+&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
-            display-name = "SYMBOL-DE";
+            display-name = "SYMBOL";
             bindings = <
-&unicode_input 12   &unicode_input 11   &kp 2           &kp 3         &kp 4         &kp 5                                     &mmv MOVE_UP       &kp 6           &kp 7           &kp 8          &kp 9           &kp 0         &kp BSPC
-&trans              &bt BT_CLR          &mkp LCLK       &mkp MCLK     &mkp RCLK     &mkp MB4         &mmv MOVE_LEFT       &mkp LCLK          &mmv MOVE_RIGHT  &kp MINUS       &kp EQUAL      &unicode_input 15  &unicode_input 16  &kp BSLH   &unicode_input 13  // §
-&trans              &out OUT_USB        &out OUT_BLE    &none         &none         &mkp MB5         &trans               &mmv MOVE_DOWN     &unicode_input 10  &unicode_input 8  &unicode_input 7  &unicode_input 9  &kp PIPE     &unicode_input 14  // µ
-                   &trans              &trans          &kp SPACE                                                            &kp RET            &trans          &trans
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
-
 
         layer_3 {
             display-name = "Fn";
