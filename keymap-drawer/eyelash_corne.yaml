@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - AL GRAPHICS EDITOR
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
@@ -199,7 +199,11 @@ layers:
 combos:
 - p: [8, 9, 10]
   k: {t: '''', s: '"'}
-- p: [23, 24, 25]
-  k: {t: ;, s: ':'}
-- p: [23, 24]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [37, 38, 39]
+  k: {t: '[', s: '{'}
+- p: [8, 9]
+  k: Sft+?
+- p: [4, 3, 2]
+  k: {t: '-', s: _}
+- p: [4, 3]
+  k: '!'
