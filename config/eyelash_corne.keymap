@@ -97,10 +97,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&kp TAB           &trans  &kp NUMBER_7  &kp N8        &kp N9        &kp MINUS                                &mmv MOVE_UP                     &trans     &trans                &kp UP_ARROW          &trans             &trans    &kp BSPC
+&kp LEFT_SHIFT    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &kp LEFT_ARROW        &kp DOWN_ARROW        &kp RIGHT          &kp HOME  &trans
+&kp LEFT_CONTROL  &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &kp C_MUTE                    &mmv MOVE_DOWN                   &trans     &kp NON_US_BACKSLASH  &trans                &kp RIGHT_BRACKET  &kp END   &kp ENTER
+                                        &trans        &kp LEFT_WIN  &trans                                                                    &kp SPACE  &trans                &kp LA(LEFT_CONTROL)
             >;
 
             sensor-bindings = <&scroll_encoder>;
