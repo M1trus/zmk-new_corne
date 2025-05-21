@@ -64,7 +64,7 @@
         };
 
         Fragezeichen {
-            bindings = <&kp QUESTION>;
+            bindings = <&kp LS(MINUS)>;
             key-positions = <8 9>;
         };
 
